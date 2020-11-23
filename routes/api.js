@@ -41,7 +41,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/all", (req, res) => {
-  res.json(toDo);
+  res.json(toDo.results);
 });
 
 router.get("/users/:number", (req, res) => {

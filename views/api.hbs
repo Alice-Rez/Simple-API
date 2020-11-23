@@ -1,1 +1,128 @@
-<p>Here will be API documentation</p>
+<h2 class="py-5 px-3">API Documentation</h2>
+
+<p>This api is using todo data from <a href="https://jsonplaceholder.typicode.com/">jsonplaceholder</a></p>
+<p>It is just for testing purpose of creating API, no service is in reality provided</p>
+
+<h3 class="p-3">Endpoints</h3>
+
+<p>Here is a list of all endpoints for this api</p>
+
+<p><strong>Get all to-dos</strong></p>
+
+<code>
+    /api/all
+</code>
+
+<p class="pt-4"><strong>Get specific number of to-dos</strong></p>
+
+<p>number corresponds to number of to-dos you want to get</p>
+
+<code>
+    /api/todo/number
+</code>
+
+<p class="pt-4"><strong>Get specific number of users with their to-dos</strong></p>
+
+<p>number corresponds to number of users you want to get.</p>
+<p>Response contains of object with array of to-dos for each user. Users are chosen randomly</p>
+
+<code>
+    /api/users/number
+</code>
+
+<p class="pt-4"><strong>Search for to-dos according to parameters values</strong></p>
+
+<code>
+    /api
+</code>
+
+<p class="pt-4">You can use any combination of these parameters to get results:</p>
+
+<ul>
+    <li><code>completed</code> - with values <code>true/false</code> to filter just (in)complete tasks</li>
+    <li><code>id</code> - search for one task id specifically</li>
+    <li><code>userId</code> - search for tasks of one specific user</li>
+</ul>
+
+<h3 class="p-3">Example</h3>
+
+<p class="pt-4">Endpoint:</p>
+
+<code>
+    /api?userId=8&completed=true
+</code>
+
+<p class="pt-4">Response:</p>
+
+<pre>
+    {
+results: [
+{
+userId: 8,
+id: 141,
+title: "explicabo consectetur debitis voluptates quas quae culpa rerum non",
+completed: true
+},
+{
+userId: 8,
+id: 142,
+title: "maiores accusantium architecto necessitatibus reiciendis ea aut",
+completed: true
+},
+{
+userId: 8,
+id: 146,
+title: "molestiae suscipit ratione nihil odio libero impedit vero totam",
+completed: true
+},
+{
+userId: 8,
+id: 147,
+title: "eum itaque quod reprehenderit et facilis dolor autem ut",
+completed: true
+},
+{
+userId: 8,
+id: 151,
+title: "accusamus adipisci dicta qui quo ea explicabo sed vero",
+completed: true
+},
+{
+userId: 8,
+id: 154,
+title: "rerum non ex sapiente",
+completed: true
+},
+{
+userId: 8,
+id: 155,
+title: "voluptatem nobis consequatur et assumenda magnam",
+completed: true
+},
+{
+userId: 8,
+id: 156,
+title: "nam quia quia nulla repellat assumenda quibusdam sit nobis",
+completed: true
+},
+{
+userId: 8,
+id: 157,
+title: "dolorem veniam quisquam deserunt repellendus",
+completed: true
+},
+{
+userId: 8,
+id: 158,
+title: "debitis vitae delectus et harum accusamus aut deleniti a",
+completed: true
+},
+{
+userId: 8,
+id: 159,
+title: "debitis adipisci quibusdam aliquam sed dolore ea praesentium nobis",
+completed: true
+}
+]
+}
+</pre>
